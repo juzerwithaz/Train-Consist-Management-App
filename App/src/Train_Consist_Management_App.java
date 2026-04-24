@@ -17,10 +17,7 @@
  * This use case introduces collection initialization and basic program startup flow.
  *
  */
-import java.util.ArrayList;
-import java.util.List;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class Train_Consist_Management_App {
     public static void main(String[] args){
@@ -112,8 +109,54 @@ public class Train_Consist_Management_App {
 
         // Program end
         System.out.println("\nProgram executed successfully.");
+/**
+ * ================================================================
+ * MAIN CLASS - UseCase4TrainConsistMgmnt
+ * ================================================================
+ *
+ * Use case 4 : Maintain ordered Bogie Consist
+ *
+ * Description:
+ * This class modls the physical chaining of trin bogies using linkedlist for ordered operations.
+ *
+ * At this stage, the application:
+ * -Adds bosgies in sequence
+ * -Inserts bogies at specific positions
+ * -Removes updated train structure
+ * -displays updated train structure
+ *
+ * this maps positional operations using LinkedList
+ *
+ */
+        System.out.println("\nUC4: Ordered Train Consist");
+
+        LinkedList<String> orderedTrain = new LinkedList<>();
+
+        // Add bogies
+        orderedTrain.add("Engine");
+        orderedTrain.add("Sleeper");
+        orderedTrain.add("AC");
+        orderedTrain.add("Cargo");
+        orderedTrain.add("Guard");
+
+        System.out.println("Initial Train: " + orderedTrain);
+
+        // Insert Pantry at position 2
+        orderedTrain.add(2, "Pantry Car");
+        System.out.println("After Adding Pantry Car: " + orderedTrain);
+
+        // Remove first and last
+        orderedTrain.removeFirst();
+        orderedTrain.removeLast();
+
+        System.out.println("Final Ordered Train: " + orderedTrain);
+
+
+        // End
+        System.out.println("\nProgram executed successfully.");
     }
 }
+
 
 
 
