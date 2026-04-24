@@ -154,6 +154,40 @@ public class Train_Consist_Management_App {
 
         // End
         System.out.println("\nProgram executed successfully.");
+/**
+ * ================================================================
+ * MAIN CLASS - UseCase5TrainConsistMgmnt
+ * ================================================================
+ *
+ * Use case 5 : Preserve Insertion Order of bogies
+ *
+ * Description:
+ * This class maintains the exact attachment order of bogies.
+ * while also preventing duplicates entries using LinkedHashSet.
+ *
+ * At this stage, the application:
+ * -Attaches bogies in order
+ * -Preserves insertion sequence
+ * -Avoids duplicate bogies
+ * -Displays final train formation
+ *
+ * this maps ordered uniqueness using linkedHahSet.
+ *
+ */
+        System.out.println("\nUC5: Preserve Insertion Order of Bogies");
+
+        Set<String> formation = new LinkedHashSet<>();
+
+        formation.add("Engine");
+        formation.add("Sleeper");
+        formation.add("Cargo");
+        formation.add("Guard");
+        formation.add("Sleeper");
+
+        System.out.println("Final Train Formation (No duplicates, ordered):");
+        System.out.println(formation);
+
+        System.out.println("\nProgram executed successfully.");
     }
 }
 
